@@ -23,7 +23,7 @@ router.get("/admin-verify" , requireSignin , adminAccess , (req , res) => {res.s
 // --->  Example of middleware :  router.post("/login" , middleware , loginController)
 
 //! 5. ---> User Order
-router.get("/get-order" , requireSignin , userAccess , orderController )
+router.get("/get-order" , requireSignin , orderController )
 
 //! 6. ---> Admin Order
 router.get("/get-all-order" , requireSignin , adminAccess , allOrderController )
