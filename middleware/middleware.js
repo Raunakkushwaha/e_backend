@@ -7,6 +7,7 @@ const requireSignin = async (req , res ,next) =>{
 
     try {
         const decode = JWT.verify(req.headers.authorization , process.env.JWT_KEY)
+        console.log("Decode ==> ", decode)
         req.user = decode;
         next()
     } catch (error) {
